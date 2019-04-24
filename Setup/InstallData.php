@@ -8,7 +8,6 @@ use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Customer\Model\Customer;
 use Magento\Customer\Setup\CustomerSetupFactory;
 
-
 class InstallData implements InstallDataInterface
 {
     const ATTRIBUTE_CODE = 'customer_status';
@@ -26,7 +25,8 @@ class InstallData implements InstallDataInterface
         $setup->startSetup();
 
         $customerSetup = $this->customerSetupFactory->create();
-        $customerSetup->addAttribute(Customer::ENTITY,
+        $customerSetup->addAttribute(
+            Customer::ENTITY,
             self::ATTRIBUTE_CODE,
             [
                 'type' => 'varchar',

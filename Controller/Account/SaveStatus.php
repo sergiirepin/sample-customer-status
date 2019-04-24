@@ -73,6 +73,5 @@ class SaveStatus extends \Magento\Customer\Controller\AbstractAccount
             }
         }
         $this->_redirect('customer/account/status');
-
     }
 }

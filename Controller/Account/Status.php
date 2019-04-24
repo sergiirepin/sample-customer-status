@@ -8,7 +8,6 @@ use Magento\Customer\Model\Session;
 use Magento\Framework\View\Result\PageFactory;
 use Magento\Framework\App\Action\Context;
 
-
 class Status extends \Magento\Customer\Controller\AbstractAccount
 {
     /**
@@ -32,11 +31,11 @@ class Status extends \Magento\Customer\Controller\AbstractAccount
     protected $resultPageFactory;
 
     /**
-     * @param Context $context
-     * @param Session $customerSession
-     * @param PageFactory $resultPageFactory
+     * @param Context                     $context
+     * @param Session                     $customerSession
+     * @param PageFactory                 $resultPageFactory
      * @param CustomerRepositoryInterface $customerRepository
-     * @param DataObjectHelper $dataObjectHelper
+     * @param DataObjectHelper            $dataObjectHelper
      */
     public function __construct(
         Context $context,
@@ -55,9 +54,10 @@ class Status extends \Magento\Customer\Controller\AbstractAccount
 
     public function execute()
     {
-        /** @var \Magento\Framework\View\Result\Page $resultPage */
+        /**
+        * @var \Magento\Framework\View\Result\Page $resultPage
+        */
         $resultPage = $this->resultPageFactory->create();
         return $resultPage;
-
     }
 }

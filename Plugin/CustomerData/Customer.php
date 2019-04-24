@@ -10,8 +10,7 @@ class Customer
 
     public function __construct(
         CurrentCustomer $currentCustomer
-    )
-    {
+    ) {
         $this->currentCustomer = $currentCustomer;
     }
 

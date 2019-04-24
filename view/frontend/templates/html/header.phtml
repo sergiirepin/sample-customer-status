@@ -24,7 +24,9 @@ $welcomeMessage = $block->getWelcome();
             <!-- /ko -->
         </li>
         <li  data-bind="scope: 'customer'">
+            <!-- ko if: customer().status-->
             <span data-bind="text: new String(customer().status)"></span>
+            <!-- /ko -->
         </li>
         <script type="text/x-magento-init">
         {
